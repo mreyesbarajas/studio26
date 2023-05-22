@@ -259,6 +259,16 @@ section.books {
 
 .formContainer h1 {
     margin-bottom: 40px;
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 8rem;
+    text-align: center;
+    background-image: url(../images/color01.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .formBox {
