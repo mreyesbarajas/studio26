@@ -1,0 +1,192 @@
+/* GLOBAL VARIABLES*/
+:root {
+    /*TYPE*/
+    --primary-font: 'Anton';
+    --secondary-font: 'Bebas Neue';
+    --fw-s: ;
+    --fw-m: ;
+    --fw-l: ;
+    --fs: 1rem;
+    /*--lh: 2em; line height??? *?
+
+    /*COLORS*/
+    --primary-color: #264653;
+    --secondary-color: #2C5362;
+    --tertiary-color: #006D77;
+    --base-color: #F5F5F5;
+    --text-color-light: #fefae0;
+    --text-color-dark: ;
+
+    --pastel-lime: #e9edc9;
+
+    /*HELPER*/
+    --spacer: 1rem;
+    --spacer-double: calc(var(--spacer) * 2);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*background: url(../images/02.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;*/
+    background: var(--base-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* NAVIGATION */
+nav {
+    height: 80px;
+    text-align: right;
+    background: var(--primary-color);
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 1.5rem 1.5rem 0 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--text-color-light);
+}
+
+/* LOGO */
+.logo {
+    float: left;
+    margin: 2rem;
+    color: var(--text-color-light);
+}
+
+.logo a { /*TEMPORARY BIT OF CODE HERE READ ME, READ MEEEEEEEEEEEEEEE*/
+    color: var(--text-color-light);
+}
+
+/* CONTENT */
+.hero h1 { /* portfolio header*/
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 8rem;
+    text-align: center;
+    background-image: url(../images/color01.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+section.c01 {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.contentContainer {
+    margin: 100px;
+    display: flex;
+}
+
+section h2 {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contentCards, .contentCards02 {
+    display: flex;
+}
+
+.contentCards, .contentText {
+    color: var(--primary-color);
+    font-size: 20px;
+    text-align: center;
+    border: dotted 2px var(--primary-color);
+    margin: 20px;
+    padding: 20px;
+}
+
+.contentCards02, .contentText02 {
+    color: var(--primary-color);
+    font-size: 20px;
+    text-align: center;
+    border: dotted 2px var(--primary-color);
+    margin: 20px;
+    padding: 20px;
+}
+.contentText h3, .contentText02 h3 {
+    text-transform: uppercase;
+}
+.contentText a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.contentText02 a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/*AESTHETIC*/
+.ribbon, .ribbon2 {flex-shrink: 0;}
+.ribbon {
+    background: var(--secondary-color);
+    height: 50px;
+}
+.ribbon2 {
+    background: var(--tertiary-color);
+    height: 50px;
+}
+
+/* FOOTER*/
+footer {
+    /*height: 80px;*/
+    flex-shrink: 0;
+    text-align: center;
+    padding: 2em 0;
+    color: var(--text-color-light);
+    background: var(--primary-color);
+}
+
+
+
+@media only screen and (min-width: 400px) {
+    .contentCards, .contentCards02 {
+        flex-direction: column;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .contentCards, .contentCards02 {
+        flex-direction: column;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .contentCards, .contentCards02 {
+        flex-direction: column;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .contentCards, .contentCards02 {
+        flex-direction: row;
+        margin: 10px;
+    }
+}

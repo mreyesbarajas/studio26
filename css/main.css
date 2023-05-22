@@ -1,0 +1,407 @@
+/* GLOBAL VARIABLES*/
+:root {
+    /*TYPE*/
+    --primary-font: 'Anton';
+    --secondary-font: 'Bebas Neue';
+    --fw-s: 400;
+    --fw-m: 700;
+    --fw-l: 800;
+    --fs: 1rem;
+    --lh: 2.5rem;
+    /*--lh: 2em; line height??? *?
+
+    /*COLORS*/
+    --primary-color: #264653;
+    --secondary-color: #2C5362;
+    --tertiary-color: #006D77;
+    --base-color: #F5F5F5;
+    --text-color-light: #fefae0;
+
+    --pastel-lime: #e9edc9;
+
+    /*HELPER*/
+    --spacer: 1rem;
+    --spacer-double: calc(var(--spacer) * 2);
+
+}
+
+
+/* STYLES*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--base-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION */
+nav {
+    height: 80px;
+    text-align: right;
+    background: var(--primary-color);
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 1.5rem 1.5rem 0 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--text-color-light);
+}
+
+/* LOGO */
+.logo {
+    float: left;
+    margin: 2rem;
+    color: var(--text-color-light);
+}
+
+.logo a { /*TEMPORARY BIT OF CODE HERE READ ME, READ MEEEEEEEEEEEEEEE*/
+    color: var(--text-color-light);
+}
+/* HEADER */
+img {
+    width: 100%;
+    height: auto;
+}
+header {
+    height: 300px;
+    padding: 0 1em;
+}
+
+.hero h1, .hero02 h1 { /* portfolio, agua miel, & magazine*/
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 8rem;
+    text-align: center;
+    background-image: url(../images/color01.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero h4 {text-align: center;}
+
+.hero03 h1 { /*bluestocking books & playing card*/
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 8rem;
+    text-align: center;
+    background-image: url(../images/color05.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* CONTENT */
+.content {
+    min-height: 800px;
+    padding: 0 1em;
+    margin-top: 2rem;
+    flex: 1 0 auto;
+}
+    /*AGUA MIEL*/
+.aguamiel img {max-width: 450px; height: auto;}
+
+.grid-container {
+    display: grid;
+    width: 15rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 10px;
+    padding-top: 2rem;
+}
+
+.grid-item {
+    width: 20rem;
+    height: auto;   
+    object-fit: cover;
+}
+
+.aguamiel {overflow: auto;}
+.grid-container {
+    float: left;
+    width: 50%;
+}
+.text {
+    float: left;
+    width: 50%;
+}
+
+.grid-item:hover {
+    transform: scale(1.5);
+}
+
+    /* PLAYING CARD */
+.gridCard {
+    display: grid;
+    width: 15rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+    padding-top: 2rem;
+    
+}
+
+.griditemCard {
+    width: 20rem;
+    height: auto;   
+    object-fit: cover;
+}
+
+    /* BREAD DIARIES */
+.gridBread {
+    display: grid;
+    width: 10rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    padding-top: 2rem;
+}
+
+.griditemBread {
+    width: 18rem;
+    height: auto;   
+    object-fit: cover;
+}
+
+.row02 {
+    grid-column: 1 / span 2;
+    width: 100%;
+}
+
+.bread {overflow: auto;}
+.gridBread{
+    float: left;
+    width: 50%;
+}
+.textBread {
+    float: left;
+    width: 50%;
+    padding-left: 10em;
+    margin-top: 2em;
+}
+    /* BLUESTOCKING */
+section.books {
+    width: 100%;
+    margin: auto;
+}
+.floatBook img {
+    float: left;
+    width: 50%;
+    margin-right: 2em;
+}
+
+/* ABOUT */
+.aboutImg {
+    width: 100%;
+    margin: auto;
+}
+
+.aboutImg img {
+    max-width: 250px;
+    border-radius: 50%;
+    float: right;
+    margin-right: 20px;
+}
+
+.aboutText p {
+    margin-top: 10px;
+    color: var(--base-color);
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+.aboutHeader h1 {
+    color: var(--text-color-light);
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 8rem;
+    text-align: center;
+}
+    
+
+.background {
+    background: url(../images/02.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.background nav, .background footer {
+    background: none;
+}
+
+/* CONTACT */
+.formContainer{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.formContainer h1 {
+    margin-bottom: 40px;
+}
+
+.formBox {
+    background: var(--tertiary-color);
+    display: flex;
+}
+
+.formLeft {
+    flex-basis: 60%;
+    padding: 40px 60px;
+    color: var(--base-color);
+}
+
+.formRight {
+    flex-basis: 40%;
+    padding: 40px;
+    background: #B4D3B2;
+    color: var(--primary-color);
+}
+
+.inputRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.inputRow, .inputGroup {
+    flex-basis: 45%;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--base-color);
+    outline: none;
+    padding-bottom: 5px;
+    background: var(--tertiary-color);
+    color: white;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid var(--base-color);
+    background: var(--tertiary-color);
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 6px;
+    display: block;
+    color: var(--text-color-light);
+}
+
+button {
+    background: var(--base-color);
+    width: 100px;
+    border: none;
+    outline: none;
+    color: var(--primary-color);
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.formLeft h3 {
+    color: var(--text-color-light);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+tr td:first-child {
+    padding-right: 20px;
+}
+
+tr td {
+    padding-top: 20px;
+}
+
+/*AESTHETIC*/
+.ribbon, .ribbon2 {flex-shrink: 0;}
+.ribbon {
+    background: var(--secondary-color);
+    height: 50px;
+}
+.ribbon2 {
+    background: var(--tertiary-color);
+    height: 50px;
+}
+
+/* FOOTER*/
+footer {
+    /*height: 80px;*/
+    flex-shrink: 0;
+    text-align: center;
+    padding: 2em 0;
+    color: var(--text-color-light);
+    background: var(--primary-color);
+}
+
+
+/* MEDIA QUERIES */
+/*  DESIGNING AT 958 X 676 */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 958px) {}
+    .grid-item {width: 12rem;}
+
+    .aboutContent {
+        padding: 0 60px;
+    }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .card {overflow: auto;}
+    .gridCard {
+    float: left;
+    width: 50%;
+    }
+
+    .textCard {
+    float: left;
+    width: 50%;
+    }
+
+    .aboutContent {
+        padding: 0 200px;
+    }
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
